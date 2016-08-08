@@ -1,0 +1,25 @@
+ <div class="progress" style="padding:0;margin:0;" ng-if='load'>
+	 <div class="indeterminate"></div>
+</div>
+
+<div class="row" style="margin-top:20%;">
+	<div class="col s6 offset-s3">
+		<h1>A</h1>
+		  <div class="row">
+				<div id="map"></div>
+		  </div>
+	</div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKRdcvmwyPTQ3gkCTKDwL4fmtTY9wv720&callback=initMap" async defer></script>
+<script type="text/javascript">
+
+	function initMap()
+	{
+		 var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          scrollwheel: false,
+          zoom: 8
+        });
+	}
+</script>
